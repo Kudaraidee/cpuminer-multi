@@ -43,6 +43,7 @@ cpuminer_SOURCES = \
   sha3/sph_shabal.c \
   sha3/sph_whirlpool.c \
   sha3/gost_streebog.c \
+  crypto/arith_uint256.cpp \
   crypto/blake2s.c \
   crypto/blake2b.c \
   crypto/oaes_lib.c \

@@ -27,7 +27,6 @@ Algorithms
  * ✓ __allium__ (Garlicoin, Tuxcoin)
  * ✓ __axiom__ (Axiom Shabal-256 based MemoHash)
  * ✓ __bastion__ (Joincoin [J])
- * ✓ __bitcore__ Permuted serie of 10 algos (BitCore)
  * ✓ __blake__ (Saffron [SFR] Blake-256)
  * ✓ __blake2s__ (NevaCoin Blake2-S 256)
  * ✓ __blake2b__ (Not SIA one)
@@ -75,6 +74,7 @@ Algorithms
  * ✓ __zr5__ (Ziftrcoin [ZRC])
 
 #### Implemented, but untested
+ * ? bitcore (BitCore Mega-BTX)
  * ? hefty1 (Heavycoin)
  * ? keccak (Maxcoin  HelixCoin, CryptoMeth, Galleon, 365coin, Slothcoin, BitcointalkCoin)
  * ? keccakc (Creativecoin)
