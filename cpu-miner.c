@@ -139,6 +139,7 @@ enum algos {
 	ALGO_X16S,
 	ALGO_X17,         /* X17 */
 	ALGO_X20R,
+	ALGO_x22,         /* x22 */
 	ALGO_XEVAN,
 	ALGO_YESCRYPT,
 	ALGO_ZR5,
@@ -208,6 +209,7 @@ static const char *algo_names[] = {
 	"x16s",
 	"x17",
 	"x20r",
+	"x22",
 	"xevan",
 	"yescrypt",
 	"zr5",
@@ -374,6 +376,7 @@ Options:\n\
                           x16s         X16S (Pigeon)\n\
                           x17          X17\n\
                           x20r         X20R\n\
+                          x22          x22\n\
                           xevan        Xevan (BitSend)\n\
                           yescrypt     Yescrypt\n\
                           zr5          ZR5\n\
@@ -2225,6 +2228,7 @@ static void *miner_thread(void *userdata)
 			case ALGO_X16S:
 			case ALGO_X17:
 			case ALGO_X20R:
+			case ALGO_x22:
 			case ALGO_ZR5:
 				max64 = 0x1ffff;
 				break;
@@ -2441,6 +2445,9 @@ static void *miner_thread(void *userdata)
 			break;
 		case ALGO_X17:
 			rc = scanhash_x17(thr_id, &work, max_nonce, &hashes_done);
+			break;
+		case ALGO_x22:
+			rc = scanhash_x22(thr_id, &work, max_nonce, &hashes_done);
 			break;
 		case ALGO_XEVAN:
 			rc = scanhash_xevan(thr_id, &work, max_nonce, &hashes_done);
